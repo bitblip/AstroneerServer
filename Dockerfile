@@ -12,7 +12,7 @@ RUN choco install -y vcredist140
 RUN choco install directx -y
 
 # Just a cool web interface to control the server process
-ADD https://github.com/ricky-davis/AstroLauncher/releases/download/v1.5.1/AstroLauncher.exe c:/astroneer/AstroLauncher.exe
+ADD https://github.com/ricky-davis/AstroLauncher/releases/download/v1.5.3/AstroLauncher.exe c:/astroneer/AstroLauncher.exe
 WORKDIR c:/astroneer
 VOLUME ["c:/astroneer/Astro/Saved"]
 EXPOSE 5000
