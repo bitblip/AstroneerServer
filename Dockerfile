@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows:10.0.17763.1282-amd64
+FROM mcr.microsoft.com/windows:10.0.17763.1040
 # install chocolatey
 RUN powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
