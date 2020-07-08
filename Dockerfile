@@ -14,7 +14,8 @@ RUN choco install directx -y
 # Just a cool web interface to control the server process
 ADD https://github.com/ricky-davis/AstroLauncher/releases/download/v1.5.3/AstroLauncher.exe c:/astroneer/AstroLauncher.exe
 WORKDIR c:/astroneer
+COPY startup.bat .
 VOLUME ["c:/astroneer/Astro/Saved"]
 EXPOSE 5000
 EXPOSE 7777/udp
-CMD AstroLauncher.exe
+CMD .\startup.bat
