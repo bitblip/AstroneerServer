@@ -7,11 +7,12 @@ IF "%AzContainerInstance%" == "" GOTO DEFAULT
 SET 
 ECHO Do azure setup
 cmdkey /add:"%AzTarget%" /user:"%AzUser%" /pass:"%AzPass%"
+REM RMDIR /Q/S c:\astroneer\Astro\Saved
 mklink /d c:\astroneer\Astro\Saved "\\%AzTarget%\%AzShareName%"
 GOTO END
 :DEFAULT
 GOTO END
 :END
 
-.\AstroLauncher.exe
+AstroLauncher.exe
 EXIT /B

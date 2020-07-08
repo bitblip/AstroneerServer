@@ -15,7 +15,7 @@ RUN choco install directx -y
 ADD https://github.com/ricky-davis/AstroLauncher/releases/download/v1.5.3/AstroLauncher.exe c:/astroneer/AstroLauncher.exe
 WORKDIR c:/astroneer
 COPY startup.bat .
-VOLUME ["c:/astroneer/Astro/Saved"]
+# VOLUME ["c:/astroneer/Astro/Saved"] Interfearing with the azure hosting, TODO: put this back in
 EXPOSE 5000
 EXPOSE 7777/udp
 CMD .\startup.bat
