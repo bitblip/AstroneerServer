@@ -1,5 +1,9 @@
 @ECHO OFF
 
+REM steamcmd returns non 0 success results
+powershell $(steamcmd.exe +login anonymous +force_install_dir c:/astroneer/ +app_update  728470 +quit; powershell exit 0)
+
+
 REM Until Azure supports the container instance volume mounts, UNC Azure Files and symbolic link it
 
 IF "%AzContainerInstance%" == "" GOTO DEFAULT
